@@ -187,6 +187,20 @@ code {
   height: auto;
 }
 
+.image-caption {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-family: 'IBMPlexMono', monospace;
+  white-space: nowrap;
+  line-height: 1;
+}
+
 /* Project Cards Hover Effects */
 .project-card {
   transition: all 0.3s ease;
