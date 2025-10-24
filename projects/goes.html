@@ -6,7 +6,7 @@
     <title>GOES Receiver Project - Landon Mello</title>
     <meta name="description" content="GOES Receiver - Real-time weather satellite downlink using SDR." />
     <script src="../indexglobal.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css.css">
+    <link rel="stylesheet" type="text/css" href="../css.css">
   </head>
   <body class="bg-black">
     <header class="flex flex-col items-center mt-4">
@@ -22,9 +22,9 @@
             </nav>
         </div>        
         <nav class="mt-4 flex justify-center" aria-label="Main navigation">
-            <a href="../index.html" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] transition text-center">HOME</a>
-            <a href="../blog.html" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] transition text-center">BLOG</a>
-            <a href="../projects.html" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] transition text-center">PROJECTS</a>
+            <a href="../index" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">HOME</a>
+            <a href="../blog" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">BLOG</a>
+            <a href="../projects" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">PROJECTS</a>
         </nav>
     </header>
     <center>
@@ -38,10 +38,12 @@
                 <br>
                 <div class="flex justify-center">
                     <div class="max-w-2xl">
-                        <a href="../img/G18_FC_20221021T230020Z.png" target="_blank" rel="noopener noreferrer">
-                            <img src="../img/G18_FC_20221021T230020Z-compressed.png" alt="GOES-18 Full Disk Image" class="w-full object-contain">
-                        </a>
-                        <p class="text-center mt-2 text-sm">GOES-18 Full Disk FC, Click for full resolution</p>
+                        <div class="image-container">
+                            <a href="../img/G18_FC_20221021T230020Z.png" target="_blank" rel="noopener noreferrer">
+                                <img src="../img/G18_FC_20221021T230020Z-compressed.png" alt="GOES-18 Full Disk Image" class="w-full object-contain">
+                            </a>
+                            <div class="image-caption">GOES-18 Full Disk FC, Click for full resolution</div>
+                        </div>
                     </div>
                 </div>
                 <br>
@@ -53,12 +55,16 @@
                 <br>
                 <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
                     <div class="w-full md:w-1/2 max-w-md">
-                        <img src="../img/GOES-finished-night.jpg" alt="GOES receiver finished setup at night" class="w-full object-contain">
-                        <p class="text-center mt-2 text-sm">Finished GOES receiver setup mounted outside</p>
+                        <div class="image-container">
+                            <img src="../img/GOES-finished-night.jpg" alt="GOES receiver finished setup at night" class="w-full object-contain">
+                            <div class="image-caption">Finished GOES receiver setup mounted outside</div>
+                        </div>
                     </div>
                     <div class="w-full md:w-1/2 max-w-md">
-                        <img src="../img/GOES-RPI-test-roof-with-laptop.jpg" alt="GOES RPI test setup on roof with laptop" class="w-full object-contain">
-                        <p class="text-center mt-2 text-sm">Initial testing setup on the roof with laptop for signal verification</p>
+                        <div class="image-container">
+                            <img src="../img/GOES-RPI-test-roof-with-laptop.jpg" alt="GOES RPI test setup on roof with laptop" class="w-full object-contain">
+                            <div class="image-caption">SDR signal verification</div>
+                        </div>
                     </div>
                 </div>
                 <br>
@@ -68,8 +74,10 @@
                 <br>
                 <div class="flex justify-center">
                     <div class="max-w-2xl">
-                        <img src="../img/GOES-Hermes-drivebay-compressed.jpg" alt="Hermes server drive bays" class="w-full object-contain">
-                        <p class="text-center mt-2 text-sm">Hermes server with 6 drive bays configured in RAID 5</p>
+                        <div class="image-container">
+                            <img src="../img/GOES-Hermes-drivebay-compressed.jpg" alt="Hermes server drive bays" class="w-full object-contain">
+                            <div class="image-caption">Hermes server with 6 drive bays configured in RAID 5</div>
+                        </div>
                     </div>
                 </div>
             </div>

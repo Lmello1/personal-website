@@ -6,7 +6,7 @@
     <title>Breakaway Project - Landon Mello</title>
     <meta name="description" content="Breakaway - A custom electronics project." />
     <script src="../indexglobal.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css.css">
+    <link rel="stylesheet" type="text/css" href="../css.css">
   </head>
   <body class="bg-black">
     <header class="flex flex-col items-center mt-4">
@@ -22,9 +22,9 @@
             </nav>
         </div>        
         <nav class="mt-4 flex justify-center" aria-label="Main navigation">
-            <a href="../index.html" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] transition text-center">HOME</a>
-            <a href="../blog.html" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] transition text-center">BLOG</a>
-            <a href="../projects.html" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] transition text-center">PROJECTS</a>
+            <a href="../index" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">HOME</a>
+            <a href="../blog" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">BLOG</a>
+            <a href="../projects" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">PROJECTS</a>
         </nav>
     </header>
     <center>
@@ -48,11 +48,17 @@
                 <p>The strength of 3d prints depends a LOT on the direction the material is extruded in. When you try to break a 3d print against the layer lines you very quickly find out that PLA can be quite strong! Because FDM 3d printing works by layering extruded plastic on top of each other there is always a weak spot formed when a new hot layer is added to an already cooled layer. Here was my first attempt with layer lines running the wrong way and a way too thick outer shell.</p>
                 <br>
                 <center>
-                <img src="../img/Breakaway-card-fail-compressed.jpg" alt="failed breakaway" width="50%">
+                <div class="image-container">
+                    <img src="../img/Breakaway-card-fail-compressed.jpg" alt="failed breakaway" width="50%">
+                    <div class="image-caption">Failed breakaway attempt</div>
+                </div>
                 </center>
                 <p>After a quick redesign and some digging around in the slicer settings I found a way to dictate the direction that these layer lines were printed in. After starting the print of  another slimmed down model taking care to make sure the score line is in the same orientation of the layer lines (snapping with the "grain" of the 3d print). Once the printer finished the walls of the inner cavity I was able to simply slide the index card in and let the printer continue the print.</p>
                 <center>
-                <img src="../img/Breakaway-card-print-compressed.jpg" alt="index card in printer" width="50%">
+                <div class="image-container">
+                    <img src="../img/Breakaway-card-print-compressed.jpg" alt="index card in printer" width="50%">
+                    <div class="image-caption">Index card in printer</div>
+                </div>
                 </center>
                 <p>And this version finally did it! I could spend more time tweaking the CAD model and slicer settings to get a better break, I think this works just fine for my own use. I do not have anything as important as nuclear launch codes to secure in here however I do plan to use them as creative holders for one time use 2fa passwords! It could also make for a very special card if it could survive in the mail.</p>
                 <center>

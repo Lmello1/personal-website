@@ -6,7 +6,7 @@
     <title>Projects - Landon Mello</title>
     <meta name="description" content="Engineering and electronics projects by Landon Mello, including coilguns, satellite receivers, and more." />
     <script src="indexglobal.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css.css">
+    <link rel="stylesheet" type="text/css" href="css.css">
   </head>
   <body class="bg-black">
     <header class="flex flex-col items-center mt-4">
@@ -22,9 +22,9 @@
             </nav>
         </div>        
         <nav class="mt-4 flex justify-center" aria-label="Main navigation">
-            <a href="index.html" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] transition text-center">HOME</a>
-            <a href="blog.html" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] transition text-center">BLOG</a>
-            <a href="projects.html" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] transition text-center" aria-current="page">PROJECTS</a>
+            <a href="index" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">HOME</a>
+            <a href="blog" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">BLOG</a>
+            <a href="projects" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center" aria-current="page">PROJECTS</a>
         </nav>
     </header>
     <center>
@@ -32,68 +32,70 @@
         <div class="w-3/5 min-w-100 p-1 border-1 bg-white">
           <div class="p-1 border-4 border-black">
             <div class="p-2 bg-black text-white  text-center">
+              <br>
               <div class="flex flex-wrap justify-center gap-4">
-                <div class="w-65 h-80 border-4 border-black bg-[#262626] text-white  flex flex-col items-center p-2">
+                <a href="projects/stingray" class="project-card w-65 h-80 border-4 border-black bg-black text-white flex flex-col items-center p-2">
                     <img src="img/STINGRAY_Open.JPG" alt="STINGRAY module open" class="w-5/6 h-45 object-cover border-2 border-white">
                     <h2 class="text-lg font-bold mt-2">STINGRAY</h2>
                     <p class="text-sm text-center">18650 based portable power solution</p>
-                    <a href="projects/MBU.html" class="mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</a>
-                </div>
-                <div class="w-65 h-80 border-4 border-black bg-[#262626] text-white  flex flex-col items-center p-2">
+                    <span class="project-link mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</span>
+                </a>
+                <a href="projects/placeholder" class="project-card w-65 h-80 border-4 border-black bg-black text-white flex flex-col items-center p-2">
                     <img src="img/" alt="ARCHER rocket" class="w-5/6 h-45 object-cover border-2 border-white">
                     <h2 class="text-lg font-bold mt-2">ARCHER</h2>
                     <p class="text-sm text-center">Tube Launched Discarding Sabot Actively Fin Stabilized model rocket</p>
-                    <a href="projects/placeholder.html" class="mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</a>
-                </div>
-                <div class="w-65 h-80 border-4 border-black bg-[#262626] text-white  flex flex-col items-center p-2">
+                    <span class="project-link mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</span>
+                </a>
+                <a href="projects/MRMT-PSU" class="project-card w-65 h-80 border-4 border-black bg-black text-white flex flex-col items-center p-2">
                     <img src="img/" alt="MRMT Power Supply PCB" class="w-5/6 h-45 object-cover border-2 border-white">
                     <h2 class="text-lg font-bold mt-2">MRMT PSU Module</h2>
                     <p class="text-sm text-center">Adaptable AC/DC Power Supply for the MRMT system</p>
-                    <a href="projects/MRMT-PSU.html" class="mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</a>
-                </div>
-                <div class="w-65 h-80 border-4 border-black bg-[#262626] text-white  flex flex-col items-center p-2">
+                    <span class="project-link mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</span>
+                </a>
+                <a href="projects/mrmt" class="project-card w-65 h-80 border-4 border-black bg-black text-white flex flex-col items-center p-2">
                     <img src="img/MRMT-10U-DESK.JPG" alt="10U MRMT desk unit" class="w-5/6 h-45 object-cover border-2 border-white">
                     <h2 class="text-lg font-bold mt-2">Rack Mount Standard</h2>
                     <p class="text-sm text-center">A connection standard for High Speed rack mount devices.</p>
-                    <a href="projects/mrmt.html" class="mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</a>
-                </div>
-                <div class="w-65 h-80 border-4 border-black bg-[#262626] text-white  flex flex-col items-center p-2">
+                    <span class="project-link mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</span>
+                </a>
+                <a href="projects/placeholder" class="project-card w-65 h-80 border-4 border-black bg-black text-white flex flex-col items-center p-2">
                     <img src="img/Coilgun-complete-overhead-compressed.jpg" alt="Electromagnetic Coilgun" class="w-5/6 h-45 object-cover border-2 border-white">
                     <h2 class="text-lg font-bold mt-2">Coilgun</h2>
                     <p class="text-sm text-center">Multi-stage high-voltage coilgun using IGBTs.</p>
-                    <a href="projects/placeholder.html" class="mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</a>
-                </div>
-                <div class="w-65 h-80 border-4 border-black bg-[#262626] text-white  flex flex-col items-center p-2">
+                    <span class="project-link mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</span>
+                </a>
+                <a href="projects/alucard" class="project-card w-65 h-80 border-4 border-black bg-black text-white flex flex-col items-center p-2">
                     <img src="img/ALU-RT-PCBFRONT.png" alt="NOAA Satellite Receiver" class="w-5/6 h-45 object-cover border-2 border-white">
                     <h2 class="text-lg font-bold mt-2">ALU Credit Card</h2>
                     <p class="text-sm text-center">Pocket Sized 8 bit ALU for a disposable business card</p>
-                    <a href="projects/alucard.html" class="mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</a>
-                </div>
-                <div class="w-65 h-80 border-4 border-black bg-[#262626] text-white  flex flex-col items-center p-2">
+                    <span class="project-link mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</span>
+                </a>
+                <a href="projects/placeholder" class="project-card w-65 h-80 border-4 border-black bg-black text-white flex flex-col items-center p-2">
                     <img src="img/SDR_Workstation_overview.JPG" alt="IMAGE COMING SOON" class="w-5/6 h-45 object-cover border-2 border-white">
                     <h2 class="text-lg font-bold mt-2">Modular SDR workstation</h2>
                     <p class="text-sm text-center">Pelican case style cyberdeck for SDR applications</p>
-                    <a href="projects/placeholder.html" class="mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</a>
-                </div>
-                <div class="w-65 h-80 border-4 border-black bg-[#262626] text-white  flex flex-col items-center p-2">
+                    <span class="project-link mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</span>
+                </a>
+                <a href="projects/breakaway" class="project-card w-65 h-80 border-4 border-black bg-black text-white flex flex-col items-center p-2">
                     <img src="img/Breakaway-card-complete-compressed.jpg" alt="Electromagnetic Coilgun" class="w-5/6 h-45 object-cover border-2 border-white">
                     <h2 class="text-lg font-bold mt-2">Breakaway Cards</h2>
                     <p class="text-sm text-center">3D Printed Break Apart security cards</p>
-                    <a href="projects/breakaway.html" class="mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</a>
-                </div>
-                <div class="w-65 h-80 border-4 border-black bg-[#262626] text-white  flex flex-col items-center p-2">
+                    <span class="project-link mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</span>
+                </a>
+                <a href="projects/goes" class="project-card w-65 h-80 border-4 border-black bg-black text-white flex flex-col items-center p-2">
                     <img src="img/GOES-finished-storm-compressed.jpg" alt="NOAA Satellite Receiver" class="w-5/6 h-45 object-cover border-2 border-white">
                     <h2 class="text-lg font-bold mt-2">GOES Receiver</h2>
                     <p class="text-sm text-center">Real-time weather satellite downlink using SDR</p>
-                    <a href="projects/goes.html" class="mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</a>
-                </div>
-                <div class="w-65 h-80 border-4 border-black bg-[#262626] text-white  flex flex-col items-center p-2">
+                    <span class="project-link mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</span>
+                </a>
+                <a href="projects/pcb-business-card" class="project-card w-65 h-80 border-4 border-black bg-black text-white flex flex-col items-center p-2">
                     <img src="img/PCB-progmount-smile-compressed.jpg" alt="IMAGE COMING SOON" class="w-5/6 h-45 object-cover border-2 border-white">
                     <h2 class="text-lg font-bold mt-2">First PCB Business Card</h2>
                     <p class="text-sm text-center">My first attempt at a affordable PCB Business Card.</p>
-                    <a href="projects/pcb-business-card.html" class="mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</a>
-                </div>
+                    <span class="project-link mt-auto text-blue-400 hover:text-[#ef6300]">View Project →</span>
+                </a>
               </div>
+              <br>
             </div>
           </div>
         </div>
