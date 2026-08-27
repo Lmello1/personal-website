@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flat-Pack 3D Printed Discone Antenna - Landon Mello</title>
+    <meta name="description" content="Designing and building a 3D printed, flat-pack discone antenna." />
+    <script src="../indexglobal.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css.css">
+  </head>
+  <body class="bg-black">
+    <header class="flex flex-col items-center mt-4">
+        <div class="relative w-full flex flex-col md:flex-row justify-center items-center mt-4">
+            <div class="w-full md:w-1/5 min-w-[300px] h-16 p-10 bg-[#393939] rounded-none border-r-8 border-b-8 border-[#181818] flex flex-col items-center justify-center text-center" style="white-space: nowrap;">
+                <h1 class="text-4xl font-bold text-white">LANDON MELLO</h1>
+                <p class="text-xl font-bold text-white">Mechanical Engineer</p>
+            </div>
+            <nav class="mt-4 md:mt-0 md:absolute md:right-1/5 md:top-1/2 md:transform md:-translate-y-1/2 flex flex-col items-center space-y-0">
+                <a href="mailto:contact@landonmello.com" class="bg-[#393939] text-white font-mono border-2 border-[#262626] w-32 hover:border-[#ef6300] transition text-center" aria-label="Email Contact">Email</a>
+                <a href="https://github.com/lmello1" target="_blank" rel="noopener noreferrer" class="bg-[#393939] text-white font-mono border-2 border-[#262626] w-32 hover:border-[#ef6300] transition text-center" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://linkedin.com/in/landonmello" target="_blank" rel="noopener noreferrer" class="bg-[#393939] text-white font-mono border-2 border-[#262626] w-32 hover:border-[#ef6300] transition text-center" aria-label="LinkedIn Profile">LinkedIn</a>
+            </nav>
+        </div>        
+        <nav class="mt-4 flex justify-center" aria-label="Main navigation">
+            <a href="../index" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">HOME</a>
+            <a href="../blog" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center" aria-current="page">BLOG</a>
+            <a href="../projects" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">PROJECTS</a>
+        </nav>
+    </header>
+    <center>
+        <br>
+        <div class="w-3/5 min-w-100 p-1 border-1 bg-white">
+          <div class="p-1 border-4 border-black">
+            <div class="p-2 bg-black text-white font-mono text-center">
+                <h2>Flat-Pack 3D Printed Discone Antenna</h2>
+                <p class="text-sm text-gray-300 mb-4">Published: 8/15/2026</p>
+                <br>
+
+                <div class="flex justify-center">
+                    <div class="max-w-2xl">
+                        <img src="../img/Discone-standing.jpg" alt="Assembled flat-pack 3D printed discone antenna" class="w-full object-contain">
+                        <p class="text-center mt-2 text-sm">The finished antenna on it's tripod mount</p>
+                    </div>
+                </div>
+                <br>
+
+                <p>For one of my projects, <a herf src="link" class="text-blue-400 hover:text-[#ef6300] text-sm">DART</a>, I needed an affordable, small form factor, and extremely wideband antenna. I was attracted to the inherent wide band characteristics of discone antennas but was discouraged by the high unit price for COTS units. As I was looking into alternatives I could not shake the idea of the possibility of making an extremely inexpensive discone antenna. One of the main price drivers for commercial discones is the use of a complex threaded main hub that all the radials screw into. While this is great for portability and ease of assembly, complicated metal parts like that do no favors for affordability.</p>
+                <br>
+
+                <div class="flex justify-center">
+                    <div class="max-w-2xl">
+                        <img src="../img/discone-head.jpg" alt="COTS complex centeral hub" class="w-full object-contain">
+                        <p class="text-center mt-2 text-sm">COTS complex centeral hub</p>
+                    </div>
+                </div>
+                <br>
+
+                <p>I decided to attempt a design that utilized 3D printing and sheet metal for the central hub, cutting down the cost drastically to around 10 dollars per unit while still maintaining great wideband reception characteristics. Targeting a frequency range of 100Mhz to 1.7Ghz to allow for reception across almost the entire RTL-SDR reception range, dimensions for the radials were calculated. The top disk is a simple design, just 8 radials contacting the upper sheet metal plate, the lower cone is mildly more complicated, using bent radials.</p>
+                <br>
+
+                <p>A bulkhead SMA mount is threaded into the bottom sheet metal plate, connecting to the cone radials, than the center core is soldered to the top sheet metal, connecting to the disk radials. Everything is than sandwiched together and held in compression by 4 M3 socket head cap screws through the top. This simple design makes it easy to deploy and take down in the field. Another advantage to this design is that all the radials can be stored within the PVC pipe and packed inside the tripod bag!</p>
+                <br>
+
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="w-full md:w-1/2 max-w-md">
+                        <div class="image-container">
+                            <img src="../img/discone-base-top.jpg" alt="Top sheet metal plate with center contact" class="w-full object-contain">
+                            <div class="image-caption">Top sheet metal plate with center contact</div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 max-w-md">
+                        <div class="image-container">
+                            <img src="../img/discone-base-bottom.jpg" alt="View of bottom sheet metal plate & SMA bulkhead" class="w-full object-contain">
+                            <div class="image-caption">View of bottom sheet metal plate & SMA bulkhead</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="w-full md:w-1/2 max-w-md">
+                        <div class="image-container">
+                            <img src="../img/discone-base-no-radials.jpg" alt="Discone base" class="w-full object-contain">
+                            <div class="image-caption">Discone base</div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 max-w-md">
+                        <div class="image-container">
+                            <img src="../img/discone-base-radials.jpg" alt="Discone base with radials installed" class="w-full object-contain">
+                            <div class="image-caption">Discone base with radials installed</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="flex justify-center">
+                    <div class="max-w-2xl">
+                        <img src="../img/discone-sideview.png" alt="Sideview of the discone assembaly" class="w-full object-contain">
+                        <p class="text-center mt-2 text-sm">Sideview of the discone assembaly</p>
+                    </div>
+                </div>
+                <br>
+
+                <h2 id="bill-of-materials" class="text-center">Bill of Materials</h2>
+                <br>
+                <p>Total BOM cost per antenna: ~$15</p>
+                <br>
+                <div class="flex justify-center">
+                    <table class="text-left border border-gray-600 text-sm">
+                        <thead>
+                            <tr class="border-b border-gray-600">
+                                <th class="px-3 py-2 border-r border-gray-600">Item</th>
+                                <th class="px-3 py-2 border-r border-gray-600">Qty</th>
+                                <th class="px-3 py-2 border-r border-gray-600">Unit Cost</th>
+                                <th class="px-3 py-2">Total Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-600">
+                                <td class="px-3 py-2 border-r border-gray-600">7.5" 12 gauge galvinized steel wire</td>
+                                <td class="px-3 py-2 border-r border-gray-600">8</td>
+                                <td class="px-3 py-2 border-r border-gray-600">0.11$</td>
+                                <td class="px-3 py-2">0.88$</td>
+                            </tr>
+                            <tr class="border-b border-gray-600">
+                                <td class="px-3 py-2 border-r border-gray-600">23" 12 gauge galvinized steel wire</td>
+                                <td class="px-3 py-2 border-r border-gray-600">8</td>
+                                <td class="px-3 py-2 border-r border-gray-600">0.34$</td>
+                                <td class="px-3 py-2">2.72$</td>
+                            </tr>
+                            <tr class="border-b border-gray-600">
+                                <td class="px-3 py-2 border-r border-gray-600">Custom Sheet Metal top/bottom</td>
+                                <td class="px-3 py-2 border-r border-gray-600">1</td>
+                                <td class="px-3 py-2 border-r border-gray-600">1.77$</td>
+                                <td class="px-3 py-2">1.77$</td>
+                            </tr>
+                            <tr class="border-b border-gray-600">
+                                <td class="px-3 py-2 border-r border-gray-600">SMA Connector</td>
+                                <td class="px-3 py-2 border-r border-gray-600">1</td>
+                                <td class="px-3 py-2 border-r border-gray-600">1.60$</td>
+                                <td class="px-3 py-2">1.60$</td>
+                            </tr>
+                            <tr>
+                                <td class="px-3 py-2 border-r border-gray-600">Fillament &amp; Misc hardware</td>
+                                <td class="px-3 py-2 border-r border-gray-600">1</td>
+                                <td class="px-3 py-2 border-r border-gray-600">~2.50$</td>
+                                <td class="px-3 py-2">~2.50$</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="border-t border-gray-600 font-bold">
+                                <td class="px-3 py-2 border-r border-gray-600" colspan="3">Total</td>
+                                <td class="px-3 py-2">~$9.50</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <br>
+
+                <div class="flex justify-center">
+                    <div class="max-w-2xl">
+                        <img src="../img/discone-sideview.png" alt="NANOvna Preformance" class="w-full object-contain">
+                        <p class="text-center mt-2 text-sm">NANOvna Preformance | "Not great, not terrable"</p>
+                    </div>
+                </div>
+                <br>
+
+                <p>Performance wise for the price it is not bad! There are some nasty resonances that appear closer to the frequency limit (anything above 1.2Ghz or so) If people are interested, I have the full cut list, BOM, and all the 3D models available <a herf src="link" class="text-blue-400 hover:text-[#ef6300] text-sm">HERE</a> on github to make this at home! I am sure there is a lot of room for improvement (off the top of my head, I am sure improving the contact area between the radials and the sheet metal would do wonders for RF performance) so forks and comments are very much appreciated!</p>
+                <br>
+            </div>
+          </div>
+        </div>
+    </center>
+  </body>
+</html>

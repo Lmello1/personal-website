@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DART - Distributed Autonomous RF Tracker - Landon Mello</title>
+    <meta name="description" content="DART is a multi-node TDOA radio direction finding system for locating RF transmitters, using GPS-timestamped SDR nodes and a LoRa mesh backhaul." />
+    <script src="../indexglobal.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css.css">
+  </head>
+  <body class="bg-black">
+    <header class="flex flex-col items-center mt-4">
+        <div class="relative w-full flex flex-col md:flex-row justify-center items-center mt-4">
+            <div class="w-full md:w-1/5 min-w-[300px] h-16 p-10 bg-[#393939] rounded-none border-r-8 border-b-8 border-[#181818] flex flex-col items-center justify-center text-center" style="white-space: nowrap;">
+                <h1 class="text-4xl font-bold text-white">LANDON MELLO</h1>
+                <p class="text-xl font-bold text-white">Mechanical Engineer</p>
+            </div>
+            <nav class="mt-4 md:mt-0 md:absolute md:right-1/5 md:top-1/2 md:transform md:-translate-y-1/2 flex flex-col items-center space-y-0">
+                <a href="mailto:contact@landonmello.com" class="bg-[#393939] text-white font-mono border-2 border-[#262626] w-32 hover:border-[#ef6300] transition text-center" aria-label="Email Contact">Email</a>
+                <a href="https://github.com/lmello1" target="_blank" rel="noopener noreferrer" class="bg-[#393939] text-white font-mono border-2 border-[#262626] w-32 hover:border-[#ef6300] transition text-center" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://linkedin.com/in/landonmello" target="_blank" rel="noopener noreferrer" class="bg-[#393939] text-white font-mono border-2 border-[#262626] w-32 hover:border-[#ef6300] transition text-center" aria-label="LinkedIn Profile">LinkedIn</a>
+            </nav>
+        </div>        
+        <nav class="mt-4 flex justify-center" aria-label="Main navigation">
+            <a href="../index" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">HOME</a>
+            <a href="../blog" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center">BLOG</a>
+            <a href="../projects" class="w-28 px-4 bg-[#393939] text-white border-2 border-[#262626] hover:border-[#ef6300] focus:border-[#262626] focus:outline-none transition text-center" aria-current="page">PROJECTS</a>
+        </nav>
+    </header>
+    <center>
+        <br>
+        <div class="w-3/5 min-w-100 p-1 border-1 bg-white">
+          <div class="p-1 border-4 border-black">
+            <div class="p-2 bg-black text-white font-mono text-center">
+                <h2>DART — Distributed Autonomous RF Tracker</h2>
+                <br>
+                <p>DART (Distributed Autonomous RF Tracker) is a multi-node radio direction finding system that uses Time Difference of Arrival (TDOA) to locate radio transmitters. Each node consists of a Raspberry Pi 3 Model A+, an RTL-SDR Blog V3, a u-blox NEO-M8N GPS receiver, and a Heltec LoRa 32 V3 (SX1262). The system is fully self-contained with no internet or infrastructure dependency — all inter-node communication runs over LoRa only.</p>
+                <br>
+
+                <h2 id="node-hardware" class="text-center">Node Hardware</h2>
+                <br>
+                <p>Each field node pairs a Raspberry Pi 3 Model A+ with an RTL-SDR Blog V3 for RF capture, a u-blox NEO-M8N GPS receiver for timing/positioning, and a Heltec LoRa 32 V3 (SX1262) for the wireless backhaul to the master station. This keeps every node small, battery-friendly, and independent of any local infrastructure.</p>
+                <br>
+
+                <h2 id="gps-timestamping" class="text-center">GPS-Referenced Timestamping</h2>
+                <br>
+                <p>TDOA positioning lives or dies on timing accuracy, so each node needs its IQ samples referenced to a common clock without modifying the SDR's crystal. DART solves this by attenuating the GPS receiver's 1PPS signal and injecting it into the RF path through a directional coupler, where it shows up as a detectable power spike in the IQ stream once per second. Nodes use that spike to measure their actual TCXO sample rate and correct for drift, giving every sample an accurate GPS-referenced timestamp. Each node continuously caches 30 seconds of IQ data in RAM, keyed by GPS second, sampled at 2.4 MS/s.</p>
+                <br>
+
+                <h2 id="master-station" class="text-center">Master Station</h2>
+                <br>
+                <p>The master station is a laptop running a Flask web application with a Leaflet map, a live waterfall display, and a Reticulum LoRa interface. When the operator identifies a signal of interest by drawing a box on the waterfall, the master sends a tune request to all nodes, followed by a collect request specifying a GPS second, sample offset, sample count, and an optional decimation bandwidth.</p>
+                <br>
+
+                <h2 id="lora-backhaul" class="text-center">LoRa Backhaul</h2>
+                <br>
+                <p>Nodes respond sequentially on a shared 915 MHz LoRa channel (SF7, BW500, roughly 2,500 bytes/sec effective throughput), transmitting zstd-compressed IQ windows back to the master. Keeping the entire link on LoRa means DART can be deployed anywhere without relying on cell service, Wi-Fi, or any other existing network.</p>
+                <br>
+
+                <h2 id="tdoa-positioning" class="text-center">TDOA Positioning</h2>
+                <br>
+                <p>Once the IQ windows from each node arrive at the master, it cross-correlates them using GCC-PHAT to compute the time difference of arrival between node pairs. Those TDOA values are converted into a position fix, displayed on the Leaflet map as hyperbolic lines of possible transmitter location for each node pair along with a shaded probability area showing the most likely position of the transmitter.</p>
+                <br>
+
+                <h2 id="status" class="text-center">Status</h2>
+                <br>
+                <p>DART is an active, ongoing build — future posts will cover individual subsystems in more depth, including the antennas used on each node (like the flat-pack 3D printed discone built for wideband node reception).</p>
+                <br>
+            </div>
+          </div>
+        </div>
+    </center>
+  </body>
+</html>
